@@ -50,6 +50,7 @@ cmake -G "Visual Studio 16 2019" -A x64 -DCMAKE_PREFIX_PATH=<protobuf_install_di
 pip install -e . -v <br>
 
 ### Step 5 - Verify ONNX Installation: <br>
+```python
 import onnx <br>
 print(onnx.__version__) <br>
 
