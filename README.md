@@ -24,8 +24,9 @@ CMake is necessary for ONNX, so make sure you install CMake in your PC and integ
 
 To install ONNX: <br>
 ### Step 1 - Clone the Protobuf repository: 
-```bash
-git clone https://github.com/protocolbuffers/protobuf.git && cd protobuf && git checkout v21.12
+git clone https://github.com/protocolbuffers/protobuf.git
+cd protobuf
+git checkout v21.12
 
 ### Step 2 - Build Protobuf: 
 Navigate to the cmake directory in the protobuf repository - cd cmake <br>
@@ -35,10 +36,11 @@ Build the Protobuf library - msbuild protobuf.sln /m /p:Configuration=Release <b
 After the build completes, install Protobuf - msbuild INSTALL.vcxproj /p:Configuration=Release <br>
 This installs Protobuf to the specified directory (<protobuf_install_dir>). Don't forget to add the bin directory (which contains protoc.exe) to your PATH. <br>
 
-Step 3 - Update your PATH: <br>
+### Step 3 - Update your PATH: <br>
 To use protoc.exe globally, add the bin directory of your Protobuf installation to your PATH environment variable. You can do this with the following command - set CMAKE_PREFIX_PATH=<protobuf_install_dir>;%CMAKE_PREFIX_PATH% <br>
 
-Step 4 - Clone the ONNX repository: <br>
+### Step 4 - Clone the ONNX repository: <br>
+```bash
 git clone https://github.com/onnx/onnx.git <br>
 cd onnx <br>
 git checkout v1.13.0 <br>
@@ -47,7 +49,7 @@ set CMAKE_ARGS=-DONNX_USE_LITE_PROTO=ON <br>
 cmake -G "Visual Studio 16 2019" -A x64 -DCMAKE_PREFIX_PATH=<protobuf_install_dir> %CMAKE_ARGS% . <br>
 pip install -e . -v <br>
 
-Step 5 - Verify ONNX Installation: <br>
+### Step 5 - Verify ONNX Installation: <br>
 import onnx <br>
 print(onnx.__version__) <br>
 
