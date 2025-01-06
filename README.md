@@ -24,8 +24,7 @@ CMake is necessary for ONNX, so make sure you install CMake in your PC and integ
 
 To install ONNX: <br>
 Step 1 - Clone the Protobuf repository: <br>
-```bash
-git clone https://github.com/protocolbuffers/protobuf.git
+`git clone https://github.com/protocolbuffers/protobuf.git`
 cd protobuf
 git checkout v21.12
 
