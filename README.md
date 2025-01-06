@@ -23,14 +23,13 @@ Use this video to install and integrate CMake with VS Code: [CMake with VS Code]
 CMake is necessary for ONNX, so make sure you install CMake in your PC and integrate it with VS Code. <br>
 
 To install ONNX: <br>
-Step 1 - Clone the Protobuf repository: <br>
+### Step 1 - Clone the Protobuf repository: 
 ```bash
 git clone https://github.com/protocolbuffers/protobuf.git 
-cd protobuf` 
-git checkout v21.12```
-<br>
+cd protobuf 
+git checkout v21.12
 
-Step 2 - Build Protobuf: <br>
+### Step 2 - Build Protobuf: 
 Navigate to the cmake directory in the protobuf repository - cd cmake <br>
 Run CMake to configure the build system for Visual Studio - cmake -G "Visual Studio 16 2019" -A x64 -DCMAKE_INSTALL_PREFIX=<protobuf_install_dir> -Dprotobuf_MSVC_STATIC_RUNTIME=OFF -Dprotobuf_BUILD_SHARED_LIBS=OFF -Dprotobuf_BUILD_TESTS=OFF -Dprotobuf_BUILD_EXAMPLES=OFF . <br>
 Replace <protobuf_install_dir> with the directory where you want to install Protobuf (e.g., C:\protobuf). <br>
