@@ -24,9 +24,9 @@ CMake is necessary for ONNX, so make sure you install CMake in your PC and integ
 
 To install ONNX: <br>
 ### Step 1 - Clone the Protobuf repository: 
-`git clone https://github.com/protocolbuffers/protobuf.git` <br>
-`cd protobuf`<br>
-`git checkout v21.12`<br>
+`git clone https://github.com/protocolbuffers/protobuf.git` <br><br>
+`cd protobuf`<br><br>
+`git checkout v21.12`<br><br>
 
 ### Step 2 - Build Protobuf: 
 Navigate to the cmake directory in the protobuf repository - `cd cmake` <br>
@@ -54,19 +54,15 @@ To use protoc.exe globally, add the bin directory of your Protobuf installation 
 `pip install -e . -v` <br>
 
 ### Step 5 - Verify ONNX Installation: 
-`import onnx` <br>
-`print(onnx.__version__)` <br>
+`import onnx` <br><br>
+`print(onnx.__version__)` <br><br>
+Follow this ChatGPT link for installation guide  - [Installation guide for onnx](https://chatgpt.com/share/677b78b0-c478-8005-a5e6-135d76569a82)
 
+## TensorRT:
+Installation guide - [TensorRT](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html) <br>
 
-
-
-
-
-
-
-
-
-
-
-
+# Description to convert:
+After building your pytorch model, save the model for later use. <br>
+You can use this if you don't have one [CNN with CIFAR-10 pytorch model](https://github.com/SrivaniJayanthi/CIFAR-10-classification-using-pytorch) <br>
+Follow [Frameworks_Section2](https://github.com/SrivaniJayanthi/Pytorch-ONNX-TensorRT-conversion/blob/master/Frameworks_Section2.ipynb) python notebook, there are steps mentioned clearly for converting pytorch to onnx to TensorRT.
 
